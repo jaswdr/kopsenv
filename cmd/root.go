@@ -8,9 +8,8 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "mycli",
-	Short: "A simple CLI built with Cobra",
-	Long:  `This is a sample CLI application using Cobra in Go.`,
+	Use:   "kopsenv",
+	Short: "Kops version manager CLI",
 }
 
 func Execute() {
@@ -23,7 +22,6 @@ func Execute() {
 func init() {
 	rootCmd.AddCommand(listCmd)
 	rootCmd.AddCommand(downloadCmd)
-	rootCmd.AddCommand(showCmd)
+	rootCmd.AddCommand(useCmd)
 	rootCmd.AddCommand(versionCmd)
 }
-
